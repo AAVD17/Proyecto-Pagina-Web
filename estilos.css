@@ -1,0 +1,207 @@
+@import url(banner.css);
+@import url(blog.css);
+@import url(carrusel.css);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+}
+
+header{
+    width: 100%;
+    height: 80px;
+    background: #333333;
+    color: #ffffff;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.contenedor{
+    width: 98%;
+    margin: auto;
+}
+
+header .contenedor{
+    display: table;
+}
+
+h1{
+    float: left;
+}
+
+#menu-bar{
+    display: none;
+}
+
+header label{
+    float: right;
+    font-size: 28px;
+    margin: 6px 0;
+    cursor: pointer;
+    
+}
+
+.he img{
+    position: absolute;
+    top: 40px;
+    left: 50px;
+}
+
+.buscar{
+    position: absolute;
+    top: 50px;
+    left: 100px;
+}
+
+.menu{
+    position: absolute;
+    top: 75px;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(51, 51, 51, 0.9);
+    transition: all 0.5s;
+    transform: translate(100%);
+}
+
+.Usuario{
+    background-origin: padding-box;
+}
+
+.menu a {
+    display: block;
+    padding: 15px;
+    margin-right: auto;
+    text-decoration: none;
+    color: #ffffff;
+    height: 50px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.menu a:hover{
+    background: rgba(255, 255, 255, 0.3);
+}
+
+#menu-bar:checked ~ .menu{
+    transform: translate(0%);
+}
+@media (min-width: 1024px){
+    .menu{
+        position: static;
+        width: auto;
+        height: auto;
+        transform: translateX(0%);
+        float: right;
+        display: flex;
+
+    }
+    .menu a{
+        border: none;
+    }
+    header label{
+        display: none;
+    }
+}
+section{
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+@media (min-width: 1024px){
+    .contenedor{
+        width: 1000px;
+    }
+}
+
+#bienvenidos{
+    text-align: center;
+}
+
+.codigos{
+    top: 360px;
+    position: absolute;
+    right: 110px;
+}
+
+table{
+    table-layout: fixed;
+    width: 150px;
+    border: 3px solid silver;
+}
+.letras{
+    position: absolute;
+    right: 60px;
+}
+footer{
+	width: 100%;
+    height: 80px;
+    background: #333333;
+    color: #ffffff;
+    margin: 0 auto;
+}
+
+.social {
+	position: fixed; /* Hacemos que la posición en pantalla sea fija para que siempre se muestre en pantalla*/
+	left: 0; /* Establecemos la barra en la izquierda */
+	top: 200px; /* Bajamos la barra 200px de arriba a abajo */
+	z-index: 2000; /* Utilizamos la propiedad z-index para que no se superponga algún otro elemento como sliders, galerías, etc */
+}
+ 
+	.social ul {
+		list-style: none;
+	}
+ 
+	.social ul li a {
+		display: inline-block;
+		color:#fff;
+		background: #000;
+		padding: 10px 15px;
+		text-decoration: none;
+		-webkit-transition:all 500ms ease;
+		-o-transition:all 500ms ease;
+		transition:all 500ms ease; /* Establecemos una transición a todas las propiedades */
+	}
+ *{
+     margin: 0;
+     padding: o;
+     -webkit-box-sizing:border-box;
+     -moz-box-sizing:border-box;
+     box-sizing:border-box;
+ }
+.social {
+    position: fixed;
+    left: 0;
+    top: 200px;
+    z-index:2000;
+}
+.social ul {
+    list-style:none ;
+}
+.social ul li a {
+    display:inline-block;
+    color: #fff;
+    background: #000;
+    padding:10px 15px;
+    text-decoration: none;
+    -webtik-transition:all 200ms ease;
+    -o-transition:all 500ms ease;
+    transition:all 500ms ease;
+}
+.social ul li .icon-facebook2 {background: #3b5998;}
+.social ul li .icon-mail {background: #666666;}
+.social ul li .icon-tiktok {background: #000000;}
+.social ul li .icon-youtube {background: #ff0000;}
+
+.social ul li a:hover{
+    padding: 10px 30px;
+    background: #000;
+}
+

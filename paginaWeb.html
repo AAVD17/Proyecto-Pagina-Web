@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Pagina Web</title>
+    <link rel="icon" href="imagenes/andrix.png"/>
+    <link rel="stylesheet" href="css/fontello.css">
+    <link rel="stylesheet" href="css/estilos.css">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script>
+        var current = 0;
+        var imagenes = new Array();
+        
+        $(document).ready(function() {
+            var numImages = 5;
+            if (numImages <= 4) {
+                $('.right-arrow').css('display', 'none');
+                $('.left-arrow').css('display', 'none');
+            }
+        
+            $('.left-arrow').on('click',function() {
+                if (current > 0) {  
+                    current = current - 1;
+                } else {
+                    current = numImages - 3;
+                }
+        
+                $(".carrusel").animate({"left": -($('#product_'+current).position().left)}, 600);
+        
+                return false;
+            });
+        
+            $('.left-arrow').on('hover', function() {
+                $(this).css('opacity','0.5');
+            }, function() {
+                $(this).css('opacity','1');
+            });
+        
+            $('.right-arrow').on('hover', function() {
+                $(this).css('opacity','0.5');
+            }, function() {
+                $(this).css('opacity','1');
+            });
+        
+            $('.right-arrow').on('click', function() {
+                if (numImages > current + 3) {
+                    current = current+1;
+                } else {
+                    current = 0;
+                }
+        
+                $(".carrusel").animate({"left": -($('#product_'+current).position().left)}, 600);
+        
+                return false;
+            }); 
+    });
+    </script>
+
+</head>
+<body>
+    <header>
+       <div class="contenedor">
+           <h1 class=>   Mi página  </h1>
+           <div class="he">
+               <img src="imagenes/andrix.png" width="35px" height="35px">
+               <div class="buscar">
+                    <h4>Buscar:<input type="search"></h4>
+               </div>
+            </div>
+           <input type="checkbox" id="menu-bar">
+           <label class="icon-list-bullet" for="menu-bar"></label>
+            <nav class="menu">
+                <a href="">Inicio</a>
+                <a href="">Libros</a>
+                <a  href="">Empleos</a>
+                <a href="">Videos</a>
+                <a href="">Recuerda</a>
+            </nav>
+       </div>
+       <div class="social">
+           <ul>
+               <li><a href="https://www.facebook.com/7578VarguezDzul" target="blank" class="icon-facebook2"></a></li>
+               <li><a href="https://mail.google.com/mail/u/0/" target="blank" class="icon-mail"></a></li>
+               <li><a href="https://www.tiktok.com/@vdjandrix4?lang=es" target="blank" class="icon-tiktok"></a></li>
+               <li><a href="https://www.youtube.com/channel/UCzbiXTXZfPbU1bWWTJtMAsw?view_as=subscriber" target="blank" class="icon-youtube"></a></li>
+
+           </ul>
+       </div>
+
+    </header>
+        <main>
+    
+        <section id="banner">
+            <img src="imagenes/librosportada.jpg">
+            <div class="contenedor">
+                <h2>Libros para su día</h2>
+                <p>¿Por qué la importancia de leer?</p>
+                <a href="#">Leer más</a>
+            </div>
+        </section>
+           
+            <div id="carrusel">
+                <a href="#" class="left-arrow"><img src="imagenes/izquierda.png" width="30" height="30"/></a>
+                <a href="#" class="right-arrow"><img src="imagenes/derecha.png" width="30" height="30" /></a>
+                <div class="carrusel">
+                    <div class="product" id="product_0">
+                        <img src="imagenes/libro1.jpg" width="195" height="200" />
+                        <h5>Harry Potter</h5>
+                        <p>165.00 €</p>
+                    </div>
+                    <div class="product" id="product_1">
+                        <img src="imagenes/libro2.jpg" width="195" height="200" />
+                        <h5>Los Hornos de Hitler</h5>
+                        <p>100.00 €</p>
+                    </div>
+                    <div class="product" id="product_2">
+                        <img src="imagenes/libro3.jpg" width="195" height="200" />
+                        <h5>Mi planta de naranja lima</h5>
+                        <p>250.00 €</p>
+                    </div>
+                    <div class="product" id="product_3">
+                        <img src="imagenes/libro4.jpg" width="195" height="200" />
+                        <h5>Game of trons</h5>
+                        <p>75.00 €</p>
+                    </div>
+                    <div class="product" id="product_4">
+                        <img src="imagenes/libro5.jpg" width="195" height="200" />
+                        <h5>Si salieras a vivir</h5>
+                        <p>75.00 €</p>
+                    </div>
+                </div>
+            </div>
+            <section>
+            <h2 class="letras">Ejercicios Angel Varguez</h2>
+            <table class="codigos">
+                <tr>
+                  <td><a href="formulario-andrix.txt"><button>ejercicio 1</button></a></td>
+                  <td><a href="burbuja.txt"><button>ejercicio 2</button></a></td>
+                </tr>
+                <tr>
+                  <td><a href="objetos_andrix.txt"><button>ejercicio 3</button></a></td>
+                  <td><a href="index.txt"><button>ejercicio 4</button></a></td>
+                </tr>
+                <tr>
+                  <td><a href="palindrimas.txt"><button>ejercicio 5</button></a></td>
+                </tr>
+            </table>
+        </section>
+
+            <footer>
+				<p>
+					(c) Todos los derechos reservados - Angel Adrián Varguez Dzul (2020) "Sistemas Web" <br>
+					Diseñado por Dj Andrix<a href="andrixvarguezdzul1999@gmail.com"></a>
+				</p>
+			</footer>
+            
+            
+        </main>
+    
+</body>
+
+</html>
